@@ -1,0 +1,382 @@
+/* base  - 기본 구조  - 브라우저 초기화 */
+* {
+    margin: 0; padding: 0; 
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #5e5e5e;
+}
+a:hover {
+    text-decoration: underline;
+    transition: all 0.4s;
+    color:#000;
+}
+
+/* 구글폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #000000;
+    width: 100vw;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+/* 헤더영역 display: flex*/
+header {
+    display: flex;
+    justify-content: center; /* justify-content(수평): space-between을 함으로써 좌우 분산 가운데 */
+    align-items: center;  /* 위아래 가운데 */
+
+    padding: 0 50px;
+    position: fixed; 
+    width: 100vw; /* 좌우 너비 */ height: 80px;
+    background-color: #121212;
+}
+
+header > h3 {
+    color: #ffffff;
+}
+
+ul {
+    display: flex; /* 이것때문에 메뉴와 유틸의 li는 원래 블록속성인데 옆으로 배치됨 */ 
+}	
+    .nav {
+        width:560px;
+        margin-top: 80px;
+        border:0px solid red;
+        display: flex; /* 이것때문에 자식인 로고,메뉴,유틸이 좌우로 배치됨  */	
+        justify-content:space-between; /* justify-content(수평): space-between을 함으로써 좌우 분산 가운데 */
+        align-items: center;  /* 위아래 가운데 */
+        
+        padding: 0 50px;
+        position: fixed; 
+        width: 100vw; /* 좌우 너비 */ height: 80px;
+        background-color: #fff;
+    }	
+    .nav li {
+        font-size: 20px;
+    }            		
+    .nav li a {
+        display: block; 
+        width:110px; height:30px;
+        text-align: center;
+        line-height:30px;
+
+        font-weight: bold;
+    }	
+
+    .utill > li {
+        margin-left: 8px;
+    }  
+
+main {
+    padding-top: 160px;
+    width: 100vw; height: auto;
+    justify-content: center;
+    align-items: center;
+}
+    .cont1 {
+        display: flex;                /* Flexbox 적용 */
+        justify-content: center;      /* 수평 가운데 정렬 */
+        align-items: center;          /* 수직 가운데 정렬 */
+        width: 100vw;                 /* 전체 너비 */
+        height: 692px;                /* 고정 높이 */
+        background-color: #361c14;
+        margin-bottom: 13px;
+    }
+        .cont1 > a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .cont1 > a > img {
+            display: block;
+            margin: auto;
+            max-width: auto;
+            max-width: 100vw;
+            max-height: 100%;
+            height: auto;
+        }
+
+    .cont2 {
+        display: flex;                /* Flexbox 적용 */
+        justify-content: center;      /* 수평 가운데 정렬 */
+        align-items: center;          /* 수직 가운데 정렬 */
+        width: 100vw;                 /* 전체 너비 */
+        height: 692px;                /* 고정 높이 */
+        background-color: #df6098;
+        margin-bottom: 13px;
+    }
+        .cont2 > a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .cont2 > a > img {
+            display: block;
+            margin: auto;
+            max-width: auto;
+            max-width: 100vw;
+            max-height: 100%;
+            height: auto;
+        }
+
+    .cont3 {
+        display: flex;
+        width: 100vw;
+        height: 692px;
+        background-color: #fff;
+        margin-bottom: 13px;
+        justify-content: space-between; /* 양쪽 컨테이너 간격 조정 */
+    }
+    
+    .cont3-1 {
+        width: calc(50% - 6.5px); /* 50%에서 간격 절반(6.5px)을 뺀 값 */
+        margin-right: 13px;       /* 간격 유지 */
+
+        height: 692px;
+        background-color: #eee;
+    }
+    .cont3-2 {
+        width: calc(50% - 6.5px); /* 50%에서 간격 절반(6.5px)을 뺀 값 */
+
+        height: 692px;
+        background-color: #8a8a8a;
+    }
+
+        .cont3-1 > a {
+            display: flex;               /* Flexbox 적용 */
+            justify-content: center;     /* 수평 중앙 정렬 */
+            align-items: center;         /* 수직 중앙 정렬 */
+            width: 100%;                 /* 부모 컨테이너의 전체 너비 */
+            height: 100%;                /* 부모 컨테이너의 전체 높이 */
+        }
+        .cont3-1 > a > img {
+            display: block;              /* 블록 요소로 설정 */
+            margin: auto;                /* 좌우 중앙 정렬 */
+            max-width: 100%;             /* 부모 너비에 맞춤 */
+            max-height: 100%;            /* 부모 높이에 맞춤 */
+            height: auto;                /* 이미지 비율 유지 */
+            object-fit: contain;         /* 이미지 비율 유지하며 최대한 표시 */
+        }
+
+        .cont3-2 > a {
+            display: flex;               /* Flexbox 적용 */
+            justify-content: center;     /* 수평 중앙 정렬 */
+            align-items: center;         /* 수직 중앙 정렬 */
+            width: 100%;                 /* 부모 컨테이너의 전체 너비 */
+            height: 100%;                /* 부모 컨테이너의 전체 높이 */
+        }
+        .cont3-2 > a > img {
+            display: block;              /* 블록 요소로 설정 */
+            margin: auto;                /* 좌우 중앙 정렬 */
+            max-width: 100%;             /* 부모 너비에 맞춤 */
+            max-height: 100%;            /* 부모 높이에 맞춤 */
+            height: auto;                /* 이미지 비율 유지 */
+            object-fit: contain;         /* 이미지 비율 유지하며 최대한 표시 */
+        }
+        
+        .cont4 {
+            display: flex;
+            width: 100vw;
+            height: 692px;
+            background-color: #fff;
+            margin-bottom: 13px;
+            justify-content: space-between; /* 양쪽 컨테이너 간격 조정 */
+        }
+        
+        .cont4-1 {
+            width: calc(50% - 6.5px); /* 50%에서 간격 절반(6.5px)을 뺀 값 */
+            margin-right: 13px;       /* 간격 유지 */
+
+            height: 692px;
+            background-color: #f2f2f2;
+        }
+        
+        .cont4-2 {
+            width: calc(50% - 6.5px); /* 50%에서 간격 절반(6.5px)을 뺀 값 */
+
+            height: 692px;
+            background-color: #66828e;
+        }
+
+            .cont4-1 > a {
+                display: flex;               /* Flexbox 적용 */
+                justify-content: center;     /* 수평 중앙 정렬 */
+                align-items: center;         /* 수직 중앙 정렬 */
+                width: 100%;                 /* 부모 컨테이너의 전체 너비 */
+                height: 100%;                /* 부모 컨테이너의 전체 높이 */
+            }
+            .cont4-1 > a > img {
+                display: block;              /* 블록 요소로 설정 */
+                margin: auto;                /* 좌우 중앙 정렬 */
+                max-width: 100%;             /* 부모 너비에 맞춤 */
+                max-height: 100%;            /* 부모 높이에 맞춤 */
+                height: auto;                /* 이미지 비율 유지 */
+                object-fit: contain;         /* 이미지 비율 유지하며 최대한 표시 */
+            }
+    
+            .cont4-2 > a {
+                display: flex;               /* Flexbox 적용 */
+                justify-content: center;     /* 수평 중앙 정렬 */
+                align-items: center;         /* 수직 중앙 정렬 */
+                width: 100%;                 /* 부모 컨테이너의 전체 너비 */
+                height: 100%;                /* 부모 컨테이너의 전체 높이 */
+            }
+            .cont4-2 > a > img {
+                display: block;              /* 블록 요소로 설정 */
+                margin: auto;                /* 좌우 중앙 정렬 */
+                max-width: 100%;             /* 부모 너비에 맞춤 */
+                max-height: 100%;            /* 부모 높이에 맞춤 */
+                height: auto;                /* 이미지 비율 유지 */
+                object-fit: contain;         /* 이미지 비율 유지하며 최대한 표시 */
+            }
+    
+
+footer {width: 100vw; height: 90px;  background-color: #333;  color: #fff;  display: flex; justify-content: center; align-items: center; }
+
+
+/* 미디어 쿼리를 사용해서 화면 크기에 따라 햄버거 메뉴 및 네비게이션 스타일 변경 700px이하일때 */
+@media only screen and (max-width: 700px) {
+    header {
+        background-color: #ffffff;
+        padding-top: 0px;
+    }
+    header > h3 {
+        color: #121212;
+    }
+
+    /* 햄버거 메뉴 아이콘 스타일링 */
+    .menu-toggle {
+       display: flex;
+       flex-direction: column; /* 세개 토글들 세로 방향으로 나열 */
+       align-items: flex-end;/* 우측 끝 */
+       cursor: pointer;
+       position: relative;
+    }
+
+    /* 햄버거 메뉴 아이콘 스타일 */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        cursor: pointer;
+        position: fixed; /* 아이콘을 화면에 고정 */
+        z-index: 15; /* 다른 요소 위에 표시 */
+        
+        align-items: flex-end;/* 우측 끝 */
+        right: 30px; /* 오른쪽에서 20px 왼쪽 */
+        padding: 23px 0px 0 0; 
+        border:0px solid red;
+    }
+
+    .menu-toggle div {
+       width: 30px; height: 3px;
+       background-color: #444;
+       margin: 4px 0;
+       
+       /* transform와 opacity에 애니메이션 효과 추가 ease-in-out 천천히 시작하고 천천히 끝난다 */
+       transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    /* 햄버거메뉴가 엑스표기로 표현 */
+    /* 요소를 세로 방향으로 8픽셀 아래로 이동, 시계 반대 방향으로 45도 회전 */
+    .menu-toggle.show div:nth-child(1) {transform: translateY(8px) rotate(45deg);} 
+    .menu-toggle.show div:nth-child(2) {opacity: 0;}      
+    /* 요소를 세로 방향으로 8픽셀 위로 이동, 시계 방향으로 45도 회전 */        
+    .menu-toggle.show div:nth-child(3) {transform: translateY(-8px) rotate(-45deg);}     
+
+    
+    /* 햄버거메뉴 눌렀을때 하부로 떨어지는 메뉴 */
+    /* 기본 메뉴 숨김 설정 */
+    .nav {
+        display: none; /* 메뉴는 기본적으로 숨김 */
+        flex-direction: column;
+        position: fixed; /* 메뉴를 화면에 고정 */
+        margin-top: 0px;
+
+        top: 80px; left: 0;
+        width: 100vw; height: auto;
+
+        background-color: #fff;
+        z-index: 10; /* 메뉴가 다른 요소 위에 표시되도록 */
+    }
+    
+    .nav.show {display: flex; } /* show 클래스가 추가되면 메뉴를 표시 */
+    .nav li { margin: 15px 0;}       
+    .utill {display: none;}
+
+
+    main {
+        padding-top: 15px;
+        width: 100vw; height: auto;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+    }
+        .cont3 {
+            display: contents;
+            width: 100vw;
+            height: 692px;
+            background-color: #fff;
+            margin-bottom: 13px;
+        }
+        
+        .cont3-1 {
+            display: flex;                /* Flexbox 적용 */
+            justify-content: center;      /* 수평 가운데 정렬 */
+            align-items: center;          /* 수직 가운데 정렬 */
+            width: 100vw;                 /* 전체 너비 */
+            height: 692px;                /* 고정 높이 */
+            background-color: #eee;
+            margin-bottom: 13px;
+        }
+        .cont3-2 {
+            display: flex;                /* Flexbox 적용 */
+            justify-content: center;      /* 수평 가운데 정렬 */
+            align-items: center;          /* 수직 가운데 정렬 */
+            width: 100vw;                 /* 전체 너비 */
+            height: 692px;                /* 고정 높이 */
+            background-color: #8a8a8a;
+            margin-bottom: 13px;
+        }
+            
+        .cont4 {
+            display: contents;
+            width: 100vw;
+            height: 692px;
+            background-color: #fff;
+            margin-bottom: 13px;
+        }
+            
+            .cont4-1 {
+                display: flex;                /* Flexbox 적용 */
+                justify-content: center;      /* 수평 가운데 정렬 */
+                align-items: center;          /* 수직 가운데 정렬 */
+                width: 100vw;                 /* 전체 너비 */
+                height: 692px;                /* 고정 높이 */
+                background-color: #f2f2f2;
+                margin-bottom: 13px;
+            }
+            
+            .cont4-2 {
+                display: flex;                /* Flexbox 적용 */
+                justify-content: center;      /* 수평 가운데 정렬 */
+                align-items: center;          /* 수직 가운데 정렬 */
+                width: 100vw;                 /* 전체 너비 */
+                height: 692px;                /* 고정 높이 */
+                background-color: #66828e;
+                margin-bottom: 13px;
+            }
+
+}
