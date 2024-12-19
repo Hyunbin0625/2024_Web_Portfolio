@@ -5,20 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 포트폴리오2024_김현빈</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
   
-    <!-- 햄버거메뉴 토글만들기 스크립트 -->    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const nav = document.querySelector('.nav');
-
-            menuToggle.addEventListener('click', function() {
-                nav.classList.toggle('show'); /* 메뉴 표시 토글 */
-                menuToggle.classList.toggle('show'); /* 햄버거 아이콘 토글 */
-            });
-        });
-    </script>
-
     <style>
         /* 눈 내리는 효과 */
         .snow {
@@ -81,11 +70,50 @@
                     <a href="#"><img src="img/hyunbin.jpg" alt="cont4-2_img"></a>
                 </div>
             </div>
+
+
+            <article id="slider">
+                <div class="sliderwrap">
+                    <div class="slider s1">
+                        <a href="https://www.figma.com/proto/Q571LRCPn0hLrHY8jUal0P/%EC%BD%94%EC%B9%B4%EC%BD%9C%EB%9D%BC-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%A0%9C%EC%9E%91_%EA%B9%80%ED%98%84%EB%B9%88%2C-%ED%97%88%EB%8B%A4%EC%9D%B8?node-id=40000252-2576&node-type=canvas&t=MmV4204rRGBHJZNI-0&scaling=min-zoom&content-scaling=fixed&page-id=2036%3A878&starting-point-node-id=40000252%3A2576" target="_blank">
+                            <img src="img/cocacola2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="slider s2">
+                        <img src="img/BaskinRobbins2.png" alt="">
+                    </div>
+                    <div class="slider s3">
+                        <img src="img/Figma_IT2.png" alt="">
+                    </div>
+                    <div class="slider s4">
+                        <a href="https://hyunbin0625.github.io/Gallery/" target="_blank">
+                            <img src="img/Gallery2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="slider s5">
+                        <img src="img/Gallery_22.png" alt="">
+                    </div>
+                </div>
+            </article>
         </main>
 
         <footer>
-            maded by 김현빈 in 2024. &nbsp;&nbsp;&nbsp; HP 010-9510-2304 &nbsp;&nbsp;&nbsp;  email : kimhb0625@gmail.com
+            <div class="footer-content">
+                <div class="footer-cont">
+                    <p>더 많은 작업물을 보고 싶다면 </p>
+                    <a href="https://github.com/Hyunbin0625" target="_blank">
+                        <img src="img/git_icon.jpg" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <p class="footer-bottom">
+                <span>maded by 김현빈 in 2024.</span><br>
+                <span>HP 010-9510-2304</span><br>
+                <span>email : kimhb0625@gmail.com</span>
+            </p>            
         </footer>
+        
   
         <script>
             document.addEventListener("mousemove", (event) => {
@@ -133,7 +161,6 @@
                 }, 10000);
             }
             </script>
-            
     </div>
   
     <script>
